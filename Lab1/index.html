@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+
+</head>
+
+<body>
+    <style>
+        * {
+            border: 1px solid;
+        }
+        table{
+            width: 100%;
+        }
+        
+        td{
+            border: 1px solid;
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+
+    <table>
+        <tr>
+            <td colspan="4"></td>
+            <td colspan="2"></td>
+            <td></td>   <!--colspan="1" este default-->
+            <td rowspan="2"></td>
+        </tr>
+        <tr>
+            <td rowspan="2" colspan="2"></td>
+            <td></td>
+            <td colspan="2"></td>
+            <td></td>
+            <td rowspan="2"></td>
+        </tr>
+        <tr>
+            <td rowspan="2"></td>
+            <td colspan="3"></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="3"></td>
+        </tr>
+    </table>
+
+    <nav>Nav</nav>
+    <article>Article</article>
+    <section>Section</section>
+    <aside>Aside</aside>
+
+    <i>Italic</i>
+    <strong>Strong</strong>
+    <sub>Sub</sub>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+</body>
+
+</html>
