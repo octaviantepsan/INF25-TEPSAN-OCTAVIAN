@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    Register:
+    - Nume
+    - Prenume
+    - Email
+    - Parola
+    - Telefon
+    - DataNasterii
+    - DropdownAnStudiu
+    -->
+
+    <form>
+        <h1>Register</h1>
+
+        <div>
+            <label for="lname">Nume:</label>
+            <input type="text" name="nume" id="lname" />
+        </div>
+        <div>
+            <label for="fname">Prenume:</label>
+            <input type="text" name="prenume" id="fname" />
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" value="johnDoe@gmail.com">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" />
+        </div>
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="tel" pattern="[0-9]{7}" name="phone" id="phone">
+        </div>
+        <div>
+            <label for="dataNasterii">Data Nastere:</label>
+            <input type="date" name="dataNasterii" id="dataNasterii">
+        </div>
+
+        <div>
+            <label for="anStudiu">An studiu:</label>
+            <select name="anStudiu" id="anStudiu">
+                <option value="1">An 1</option>
+                <option value="2" selected>An 2</option>
+                <option value="3">An 3</option>
+            </select>
+        </div>
+
+        <label for="conditii">Accept TOS:</label>
+        <input type="checkbox" name="conditii" id="conditii" required>
+
+        <div>
+            <label for="sec">Intrebare securitate: 1 + 1 =</label>
+            <input type="number" name="sec" id="sec" min="0" max="10">
+        </div>
+
+        <div>
+            <label for="referral">Cod Invitatie</label>
+            <input type="text" name="referral" id="referral" value="discount50%" disabled>
+        </div>
+
+        <div>
+            <input type="reset" value="Reset" />
+            <input type="submit" value="Register" />
+        </div>
+    </form>
+</body>
+
+</html>
