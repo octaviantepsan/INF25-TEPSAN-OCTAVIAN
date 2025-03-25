@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #content {
+            display: flex;
+        }
+
+        :root {
+            --mainColor: #4dbad5;
+        }
+
+        .options {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+        }
+
+        main {
+            width: 70%;
+        }
+
+        .navButton {
+            text-decoration: none;
+            color: black;
+            padding: 0px 10px;
+        }
+
+        .navButton:hover {
+            background-color: var(--mainColor);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .option {
+            padding: 10px;
+            border: 1px solid var(--mainColor);
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .option:hover {
+            background-color: var(--mainColor);
+        }
+
+        .product {
+            border: 1px solid var(--mainColor);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            width: 150px;
+            height: 150px;
+            box-sizing: border-box;
+            justify-content: space-between;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            height: 2em;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h1>My shop</h1>
+        <div>
+            <a class="navButton" href="profil">Profil</a>
+            <a class="navButton" href="cos">Cos</a>
+        </div>
+    </nav>
+
+    <div id="content">
+        <div class="options">
+            <h3>Optiuni</h3>
+
+            <span class="option">Audio</span>
+            <span class="option">Accesorii</span>
+            <span class="option">Cabluri</span>
+            <span class="option">Carcase</span>
+            <span class="option">Audio</span>
+        </div>
+
+        <main>
+            <h3>Produse</h3>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div class="product">
+                    <span>procesor I7 10700K</span>
+                    <button>Adauga in cos</button>
+                </div>
+                <div class="product">
+                    <span>Monitor Alienware</span>
+                    <button>Adauga in cos</button>
+                </div>
+                <div class="product">
+                    <span>Mouse ASUS TUF</span>
+                    <button>Adauga in cos</button>
+                </div>
+                <div class="product">
+                    <span>Laptop ASUS ROG</span>
+                    <button>Adauga in cos</button>
+                </div>
+                <div class="product">
+                    <span>Keyboard HyperX</span>
+                    <button>Adauga in cos</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        My shop @2025
+    </footer>
+
+</body>
+
+</html>
