@@ -1,0 +1,110 @@
+//CSS Variables\\
+@import "colors.scss";
+//-------------------------------\\
+
+#content {
+    display: flex;
+}
+
+.options {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+main {
+    width: 70%;
+}
+
+.navButton {
+    text-decoration: none;
+    color: black;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+.navButton:hover {
+    background-color: $mainColor;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.option {
+    padding: 10px;
+    border: 1px solid $mainColor;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.option:hover {
+    background-color: $mainColor;
+}
+
+.product {
+    border: 1px solid $mainColor;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.products {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    //grid-template-areas: "produs produs produs" "produs produs produs" "produs produs produs";  //"produs produs produs" ~ prima linie
+    //areas: intre ghilimele avem coloanele, cand inchidem ghilimelele trecem la urm linie
+    gap: 10px;
+    //flex-wrap
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    height: 2em;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+button {
+    background-color: $mainColor;
+    border: 1px;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: $hoverColor;
+}
+
+@media print {
+    .option {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .options {
+        display: none;
+    }
+
+    .product {
+        width: 100%;
+    }
+}
