@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSON</title>
     <script src="scriptJson.js"></script>
 </head>
+
 <body>
 
     <ul id="l1"></ul>
@@ -14,9 +16,9 @@
     <script>
         function afisareLocalitati(localitati, id) {
             const parinte = document.getElementById(id);
-            
+
             localitati.forEach(localitate => {
-                if(localitate.print == false) {
+                if (localitate.print == false) {
                     return;
                 }
 
@@ -30,4 +32,5 @@
         XHRJson("api/localitati.json", afisareLocalitati, "l2");
     </script>
 </body>
+
 </html>

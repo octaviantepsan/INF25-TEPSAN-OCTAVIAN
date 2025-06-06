@@ -1,7 +1,7 @@
 function fetchJson(url, callback, id) {
     fetch(url)
-    .then(r => r.json())
-    .then(text => callback(text, id));
+        .then(r => r.json())
+        .then(text => callback(text, id));
 }
 
 function XHRJson(url, callback, id) {
@@ -9,7 +9,7 @@ function XHRJson(url, callback, id) {
 
 
     xhr.onreadystatechange = (ev) => {
-        if(xhr.readyState == 4 && xhr.status == 200) {
+        if (xhr.readyState == 4 && xhr.status == 200) {
             const response = JSON.parse(xhr.responseText);
             callback(response, id);
         }

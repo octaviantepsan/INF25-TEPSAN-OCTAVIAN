@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML V1</title>
+    <script src="scriptXML.js"></script>
+</head>
+
+<body>
+
+    <ul id="l1"></ul>
+    <ul id="l2"></ul>
+
+    <script>
+        function afisareLocalitati(localitati, id) {
+            const parinte = document.getElementById(id);
+
+            localitati.querySelectorAll("localitate").forEach(localitate => {
+                if (localitate.querySelector("print").innerHTML == "false") {
+                    return;
+                }
+
+                const el = document.createElement("li");
+                el.innerText = `${localitate.querySelector("name").innerHTML} lat:${localitate.querySelector("lat").innerHTML} lon:${localitate.querySelector("lon").innerHTML}`;
+                parinte.appendChild(el);
+            });
+        }
+
+        fetchXML("api/localitati-v1.xml", afisareLocalitati, "l1");
+        XHRXml("api/localitati-v1.xml", afisareLocalitati, "l2");
+    </script>
+</body>
+
+</html>
